@@ -1,11 +1,9 @@
 import React from 'react';
-import {BrowserRouter ,Routes, Route} from "react-router-dom";
 
 function hmap() {
   return (
     <div>
-        <BrowserRouter
-      
+        <h1>Heat Map</h1>
     </div>
   )
 }
