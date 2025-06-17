@@ -17,7 +17,7 @@ function App() {
       mobileNo : "8248981654",
       githubUsername : "Naresh0348",
       rollNo : "E0322031",
-      collegeName : "Sri Ramachandra Institute of Higher Education and Research",
+      collegeName : "SRIHER",
       accessCode : "xgAsNC",
     });
     alert(`Registered! ClientID: ${res.data.clientID}`);
@@ -45,7 +45,7 @@ function App() {
         Authorization :`Bearer ${token}`,
       },
     });
-    setNumberid(res.data);
+    setResult(res.data);
   }
   catch (err){
     alert("Failed to fetch");
@@ -77,10 +77,10 @@ function App() {
 
     {result && (
       <div>
-        <p><strong>Window Previous State:</strong> {JSON.stringify(result.windowPrevState)}</p>
-          <p><strong>Window Current State:</strong> {JSON.stringify(result.windowCurrState)}</p>
-          <p><strong>Numbers Fetched:</strong> {JSON.stringify(result.numbers)}</p>
-          <p><strong>Average:</strong> {result.avg.toFixed(2)}</p>
+        <p>Window Previous State: {JSON.stringify(result.windowPrevState)}</p>
+          <p>Window Current State: {JSON.stringify(result.windowCurrState)}</p>
+          <p>Numbers Fetched: {JSON.stringify(result.numbers)}</p>
+          <p>Average:{result.avg.toFixed(2)}</p>
       </div>
     )}
     </>
